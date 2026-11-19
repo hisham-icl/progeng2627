@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main(){
+    int n;
+    int c2 = 0;
+    int c = 0;
+    std::cin >> n;
+
+    // n times we draw one row
+    // note that we need a different variable
+    // for the loop counter
+    while(c2 < (n)){
+        c2++;
+
+        // the following loop draws one row
+        c = 0;
+        while (c < n){
+            c++;
+            std::cout << "*"; 
+            // there is no << std::endl
+            // because we want them on the same row
+        }
+
+        std::cout << std::endl;
+        // we go on a newline after each row
+
+    }
+
+}
