@@ -3,13 +3,12 @@
 #include <vector>
 #include <string>
 #include <sstream>
-#include <iomanip>
 
-int scalar_two(std::vector <double>& vectora, std::vector <double>& vectorb){
-    int scalarprod = 0;
+double scalar_two(std::vector <double>& vectora, std::vector <double>& vectorb){
+    double scalarprod = 0;
 
     for(int i = 0; i < vectora.size();i++){
-        int mult = vectora[i]*vectorb[i];
+        double mult = vectora[i]*vectorb[i];
         scalarprod = scalarprod + mult;
     }
     return scalarprod;
@@ -66,7 +65,7 @@ bool ensure_mult_integrity(const std::vector <std::vector <double>>& matrix_a, c
     }
     for (std::vector <double> rowa : matrix_a){
         if (rowa.size()!=na){
-        std::cout << "invalid dimensions"<<std::endl;
+            std::cout << "invalid dimensions"<<std::endl;
             return false;
         }
     }
