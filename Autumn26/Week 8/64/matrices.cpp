@@ -103,9 +103,13 @@ std::vector <std::vector <double>> multiply_mat( std::vector <std::vector <doubl
     }
     return mat_prod;
 }
-int main(){
-    std::string afilename = "matrixa.txt";
-    std::string bfilename = "matrixb.txt";
+int main(int argc, char* argv[]){
+    if(argc != 3){
+        std::cout << "invalid argument number";
+        return EXIT_FAILURE;
+    }
+    std::string afilename = argv[1];
+    std::string bfilename = argv [2];
     std::vector <std::vector <double>> matrix_a = matrix_from_file(afilename);
     std::vector <std::vector <double>> matrix_b = matrix_from_file(bfilename);
     std::vector <std::vector <double>> mat_prod = multiply_mat(matrix_a, matrix_b);
